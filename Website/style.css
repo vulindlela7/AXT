@@ -1,0 +1,239 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background: #fff;
+  color: #111;
+  line-height: 1.6;
+  font-size: 18px;
+  min-height: 100vh;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover, a:focus {
+  color: #444;
+  text-decoration: underline;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 48px 24px 48px;
+  border-bottom: 1px solid #ececec;
+  background: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 77px;
+  height: 77px;
+  object-fit: contain;
+  background: #f8f3f3;
+  border-radius: 6px;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.0rem;
+  letter-spacing: 1px;
+  color: #111;
+}
+
+/* Navigation */
+.site-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.site-nav a {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  padding: 2px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover {
+    color: #30474d; /* Slightly lighter color on hover */
+}
+
+/* Hero Section */
+.hero {
+  max-width: 900px;
+  margin: 64px auto 48px auto;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.hero h1 {
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0;
+}
+
+/* Articles Grid */
+.featured-articles {
+  max-width: 1100px;
+  margin: 0 auto 56px auto;
+  padding: 0 24px;
+}
+
+.featured-articles h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: #111;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.articles-grid article {
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+  transition: box-shadow 0.2s;
+}
+
+.articles-grid article:hover {
+  box-shadow: 0 3px 18px rgba(0,0,0,0.06);
+}
+
+.articles-grid h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 14px;
+}
+
+.articles-grid p {
+  color: #222;
+  margin-bottom: 18px;
+  font-size: 1rem;
+}
+
+.articles-grid a {
+  align-self: flex-start;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111;
+  border-bottom: 1px solid #111;
+  padding-bottom: 2px;
+}
+
+.articles-grid a:hover {
+  color: #222;
+  border-bottom: 1px solid #222;
+}
+
+/* Footer */
+.site-footer {
+  padding: 32px 48px;
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+  border-top: 1px solid #ececec;
+  background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .site-header,
+  .site-footer {
+    padding: 18px 12px;
+  }
+  .hero {
+    padding: 0 8px;
+    margin-top: 42px;
+  }
+  .featured-articles {
+    padding: 0 8px;
+  }
+  .site-nav ul {
+    gap: 18px;
+  }
+}
+
+/* --- ## 2. CSS Styling for Simplicity
+
+Add the following CSS rules to your `<style>` block to style the audio bar for a **simplistic, elegant look**. We're removing the standard system border, centering the caption, and giving it a contained appearance.
+
+### CSS Additions (within `<style>` or `style.css`)/* --- 
+
+```css
+/* --- NEW: Audio Player Styling for Elegance and Simplicity --- */
+
+/* Wrapper to center the audio bar and control its width */
+.audio-player-wrapper {
+    max-width: 600px; /* Limits the bar width for neatness */
+    margin: 30px auto 20px auto; /* Centers the bar and gives space */
+    padding: 10px;
+    border: 1px solid #e0e0e0; /* Subtle border for elegance */
+    border-radius: 4px; /* Slight rounding */
+    background-color: #f7f7f7; /* Very light background */
+}
+
+.audio-caption {
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    margin: 0 0 10px 0; /* Space between caption and player */
+    font-style: italic;
+}
+
+/* Style the native audio element */
+.article-audio-bar {
+    width: 100%; /* Makes the bar fill the wrapper width */
+    height: 30px; /* Reduces the height for a slimmer look */
+    /* You cannot style the internal controls (play button, progress bar) 
+       directly with CSS, but the wrapper contains it neatly. */
+}
+
+#article-design-box {
+    /* Insert ALL the CSS you found in the Developer Tools here */
+    background-color: #e0e0e0; /* Example: The grey colour */
+    max-width: 800px;         /* Example: If the original container was constrained */
+    padding: 20px;            /* Example: The padding around the content */
+    margin: 0 auto;           /* Example: To centre the box on the page */
+}
+
+#article-design-box img {
+    width: 100%;
+    height: auto;
+}

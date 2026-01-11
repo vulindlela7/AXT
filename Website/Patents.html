@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patent Analysis | The Unseen Blueprint</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Existing Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 77px;
+            height: 77px;
+            object-fit: contain;
+            background: #f8f3f3;
+            border-radius: 6px;
+        }
+
+        .site-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 32px; 
+        }
+
+        .site-nav a {
+            color: #000000;
+            padding: 2px 0;
+            transition: color 0.3s ease;
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid transparent;
+            text-decoration: none;
+        }
+
+        .site-nav a:hover {
+            color: #30474d;
+        }
+
+        /* --- Page Specific Content Styling --- */
+        .page-header {
+            max-width: 1000px;
+            margin: 40px auto 20px;
+            padding: 0 20px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-family: Georgia, serif;
+            color: #000000;
+        }
+        
+        .page-header p {
+            color: #555;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 10px auto;
+        }
+
+        /* * REMOVED: .articles-grid (will be replaced by .article-list-container)
+         * REMOVED: .article-image (no longer needed)
+         */
+
+        /* --- NEW List Format Styles --- */
+        .article-list-container {
+            max-width: 800px; /* Narrower width for a clean list */
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .list-card {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fcfcfc;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .list-card:hover {
+            background-color: #eef4f7;
+            border-color: #aacfe2;
+        }
+
+        .list-card h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+            color: #060808;
+            font-weight: 600; /* Slightly bolder title */
+        }
+
+        .list-card p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 0;
+        }
+        /* --- END NEW List Format Styles --- */
+        
+        .site-footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html"> 
+                <img src="axtlogo.png" alt="Logo" />
+            </a>
+        </div>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="Series.html">Series</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section class="page-header">
+        <h1>Patent Analysis: The Unseen Blueprint</h1>
+        <p>A deep dive into the intellectual property documents that shape our technological reality, often revealing ambitions and capabilities long before they become public debate.</p>
+    </section>
+    
+    <section class="article-list-container">
+        <a href="Article.html" class="list-card">
+            <h3>US Patent US6506148 B2: Nervous System Manipulation by Electromagnetic Fields from Monitors.</h3>
+            <p>An exploration of the 2001 patent detailing a method to manipulate the human nervous system using pulsed electromagnetic fields emitted from display screens.</p>
+        </a>
+
+        <a href="Article2-1.html" class="list-card">
+            <h3>US Patent US11617100 B2: A Hidden Revolution in Wireless Surveillance.</h3>
+            <p>A breakdown of the recent patent describing systems for persistent, non-intrusive human tracking and identification using existing wireless network infrastructure.</p>
+        </a>
+        
+        </section>
+</main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 ARTXTECH. All rights reserved.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
